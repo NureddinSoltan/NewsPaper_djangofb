@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # Local
     "accounts.apps.AccountsConfig",  # new
     "pages.apps.PagesConfig", # new
+    "articles.app.ArticlesConfig" # new
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,11 @@ LOGOUT_REDIRECT_URL = "home"
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"  # new
 CRISPY_TEMPLATE_PACK = "bootstrap5"  # new
+
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend" # new
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'cfms1968@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'iiqd zjgp xvod anat'
+EMAIL_USE_TLS = True
