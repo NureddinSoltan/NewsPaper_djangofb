@@ -9,10 +9,11 @@ Hi {{ user.username }}! you are {{ user.age }} years old.
 <!-- <p><a href="{% url 'logout' %}">Log Out</a></p> -->
 <form action="{% url 'logout' %}" method="post">
   {% csrf_token %}
-<button type="submit">logout</button>
-{% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a> |
-<a href="{% url 'signup' %}">Sign Up</a>
-{% endif %}
-{% endblock content %}
+  <button type="submit">logout</button>
+  {% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a> |
+  <a href="{% url 'signup' %}">Sign Up</a>
+  {% endif %}
+  <p><a href="{% url 'article_list' %}">Articles</a></p>
+  {% endblock content %}

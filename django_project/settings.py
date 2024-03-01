@@ -43,8 +43,9 @@ INSTALLED_APPS = [
     # Local
     "accounts.apps.AccountsConfig",  # new
     "pages.apps.PagesConfig", # new
-    "articles.app.ArticlesConfig" # new
+    "articles.apps.ArticlesConfig" # new
 ]
+TIME_ZONE = "Turkey" # new
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

@@ -21,5 +21,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
+    path("articles/", include("articles.urls")),
     path("", include("pages.urls")), # new
 ]
+
+
+# هل ترتيب الباثس مهم ؟
+# لما آجي أحذف العنوان رقم الداتابيس بيتحذف لكن مكانه مش بيتاخد
